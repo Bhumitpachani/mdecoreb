@@ -107,9 +107,8 @@ const taskSchema = new mongoose.Schema({
     default: false
   },
   createdBy: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Employee',
-    required: true
+    type: String,
+    trim: true
   }
 }, {
   timestamps: true
