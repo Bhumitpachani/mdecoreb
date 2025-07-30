@@ -66,7 +66,7 @@ const taskSchema = new mongoose.Schema({
   dueDate: { type: Date, required: true },
   completedSteps: [{
     stepName: { type: String, required: true },
-    completedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee' },
+    completedBy: { type: String, required: true, trim: true },
     details: { type: String },
     completedAt: { type: Date, default: Date.now }
   }],
