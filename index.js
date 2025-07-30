@@ -70,7 +70,7 @@ const taskSchema = new mongoose.Schema({
     details: { type: String },
     completedAt: { type: Date, default: Date.now }
   }],
-  status: { type: String, enum: ['pending', 'in-progress', 'completed'], default: 'pending' }
+  status: { type: String, enum: ['pending', 'in-progress', 'completed' , 'forwarded'], default: 'pending' }
 }, { timestamps: true });
 
 const Task = mongoose.model('Task', taskSchema);
