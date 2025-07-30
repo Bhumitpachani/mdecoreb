@@ -82,7 +82,7 @@ const paymentSchema = new mongoose.Schema({
   amountDue: { type: Number, required: true },
   dueDate: { type: Date, required: true },
   assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee', required: true },
-  status: { type: String, enum: ['Pending', 'Collected', 'Overdue'], default: 'Pending' },
+  status: { type: String, enum: ['Pending', 'Collected', 'Overdue', 'Partial'], default: 'Pending' },
   collectedAmount: { type: Number },
   collectedOn: { type: Date }
 }, { timestamps: true });
